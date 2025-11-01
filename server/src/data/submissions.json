@@ -1,0 +1,26 @@
+[
+  {
+    "teamCode": "timelines_1",
+    "submittedAnswer": "STARK",
+    "correct": true,
+    "timestamp": "2025-11-01T19:11:41.911Z"
+  },
+  {
+    "teamCode": "timelines_2",
+    "submittedAnswer": "STRANGE",
+    "correct": true,
+    "timestamp": "2025-11-01T19:19:55.549Z"
+  },
+  {
+    "teamCode": "timelines_4",
+    "submittedAnswer": "daredevil",
+    "correct": false,
+    "timestamp": "2025-11-01T19:30:47.862Z"
+  },
+  {
+    "teamCode": "timelines_9",
+    "submittedAnswer": "PARKER",
+    "correct": true,
+    "timestamp": "2025-11-01T23:27:45.168Z"
+  }
+]
