@@ -28,7 +28,7 @@ export default function Level4({ profile, onLogout }){
   return (
     <div className="container">
       <div className="card" style={{ maxWidth: 700, margin: '40px auto' }}>
-        <h2>Level 4 — Strange’s 14,000,605 Timelines</h2>
+        <h2>Level 4 — Strange's 14,000,605 Timelines</h2>
         <p className="small">
           You have been given a dataset. What it reveals is for you to discover.
           Use your own tools, logic, and creativity.
@@ -55,9 +55,12 @@ export default function Level4({ profile, onLogout }){
         )}
 
         {status?.completed && (
-          <p className="good" style={{ marginTop: 10 }}>
-            ✅ Completed at: {new Date(status.submission?.timestamp).toLocaleString()}
-          </p>
+          <div>
+            <p className="good" style={{ marginTop: 10 }}>
+              ✅ Completed at: {new Date(status.submission?.timestamp).toLocaleString()}
+            </p>
+            <button className="btn" onClick={() => window.location.href = 'https://chakrvyuh-aiml-d2-c4.vercel.app/'}>Go to next level</button>
+          </div>
         )}
       </div>
     </div>
