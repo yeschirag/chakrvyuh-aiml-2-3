@@ -21,7 +21,7 @@ export default function Login({ onSuccess }) {
   return (
     <div className="container">
       <div className="card" style={{ maxWidth: 520, margin: '60px auto' }}>
-        <h1>Level 4 — Strange’s Timelines</h1>
+        <h1>Level 3 — Strange’s Timelines</h1>
         <p className="small">Enter your <b>Team Code</b> to begin.</p>
 
         <form onSubmit={submit}>
