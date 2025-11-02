@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { downloadDataset, submitAnswer, ping } from '../api.js';
 
-export default function Level4({ profile, onLogout }){
+export default function Level4({ profile, onLogout }) {
   const [status, setStatus] = useState(profile || null);
   const [answer, setAnswer] = useState('');
   const [msg, setMsg] = useState('');
@@ -10,7 +10,7 @@ export default function Level4({ profile, onLogout }){
 
   const doDownload = async () => {
     try { await downloadDataset(); setMsg('Dataset downloaded successfully.'); }
-    catch(e){ setMsg('Dataset download failed.'); }
+    catch (e) { setMsg('Dataset download failed.'); }
   };
 
   const doSubmit = async () => {
@@ -28,10 +28,12 @@ export default function Level4({ profile, onLogout }){
   return (
     <div className="container">
       <div className="card" style={{ maxWidth: 700, margin: '40px auto' }}>
-        <h2>Level 4 — Strange's 14,000,605 Timelines</h2>
+        <h2>Level 3 — Strange's 14,000,605 Timelines</h2>
         <p className="small">
-          You have been given a dataset. What it reveals is for you to discover.
-          Use your own tools, logic, and creativity.
+          I am the language of broken tomorrows,
+          Carved in countless pairs of numbers.
+          Alone I seem chaos, meaningless dust,
+          Yet drawn together, I whisper the one truth.
         </p>
 
         <button className="btn" onClick={doDownload}>Download Dataset</button>
@@ -44,7 +46,7 @@ export default function Level4({ profile, onLogout }){
           className="input"
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
-          placeholder="e.g., STARK"
+          placeholder="ENTER TEXT"
         />
         <button className="btn" onClick={doSubmit} style={{ marginTop: 10 }}>Submit Answer</button>
 
