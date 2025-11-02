@@ -45,7 +45,10 @@ app.use('/api/admin', adminRoutes);
 
 // Serve static files from React build ONLY in production
 if (isProduction) {
-  const webDistPath = path.join(__dirname, '../web/dist');
+  // Go up one level from server/ to reach web/dist
+  const webDistPath = path.join(__dirname, '..', '..', 'web', 'dist');
+  
+  console.log('Serving static files from:', webDistPath);
   
   app.use(express.static(webDistPath));
   
