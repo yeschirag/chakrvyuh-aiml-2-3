@@ -1,8 +1,9 @@
 [build]
 builder = "NIXPACKS"
-
-[phases.build]
-cmd = "cd web && npm install && npm run build && cd ../server && npm install"
+buildCommand = "cd web && npm install && npm run build && cd ../server && npm install"
 
 [start]
 cmd = "cd server && npm start"
+
+[variables]
+NODE_ENV = "production"
