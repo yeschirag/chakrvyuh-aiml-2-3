@@ -2,7 +2,7 @@
   "name": "fullstack-app",
   "private": true,
   "scripts": {
-    "build": "cd web && npm install && npx vite build && cd ../server && npm install",
+    "build": "cd web && npm ci && npm run build && cd ../server && npm ci",
     "start": "cd server && npm start"
   },
   "engines": {
