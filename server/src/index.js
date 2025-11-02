@@ -10,13 +10,19 @@ import authRoutes from './routes/auth.js';
 import level4Routes from './routes/level4.js';
 import adminRoutes from './routes/admin.js';
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const app = express();
 
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(express.json({ limit: '2mb' }));
 app.use(cookieParser());
-app.use(cors({ origin: CORS_ORIGIN, credentials: false }));
+app.use(cors({
+  origin: isProduction ? undefined : process.env.CORS_ORIGIN,
+  credentials: false
+}));
+
 app.use(rateLimit);
 
 app.get('/', (_req, res) => res.json({ ok: true, service: 'Level4 API' }));
